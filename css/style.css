@@ -915,4 +915,84 @@ footer {
     font-size: 1.1rem;
     color: var(--dark-gray);
 }
+    /* Testimonials Page Specific Styles */
+.trustpilot-card {
+    background: linear-gradient(135deg, #00b67a 0%, #00a870 100%);
+    border-radius: 10px;
+    padding: 30px;
+    margin-bottom: 50px;
+    color: white;
+    box-shadow: 0 10px 30px rgba(0, 182, 122, 0.3);
 }
+
+.trustpilot-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.trustpilot-logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.trustpilot-logo i {
+    margin-right: 10px;
+    font-size: 1.8rem;
+}
+
+.trustpilot-rating {
+    text-align: right;
+}
+
+.trustpilot-rating .stars {
+    margin-bottom: 5px;
+}
+
+.trustpilot-rating span {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.trustpilot-content p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+.trustpilot-link a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 15px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.trustpilot-link a:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+}
+
+.trustpilot-link i {
+    margin-left: 8px;
+    font-size: 0.9rem;
+}
+
+/* Enhanced testimonial cards for testimonials page */
+.testimonials .testimonial-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonials .testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+}
+
