@@ -7,6 +7,310 @@
     <meta name="description" content="Contact Yeovil Cabs for reliable transportation services in Yeovil. Call, email, or use our contact form to book your ride.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Enhanced Contact Page Styles */
+        .contact-hero {
+            background: linear-gradient(135deg, var(--dark) 0%, #222 100%);
+            padding: 80px 0;
+            text-align: center;
+            color: var(--light);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" fill="%23FFD700" opacity="0.1"><path d="M500 50L550 25L600 50L650 25L700 50L750 25L800 50L850 25L900 50L950 25L1000 50L1000 100L0 100L0 50Z"/></svg>');
+            background-size: cover;
+        }
+
+        .contact-hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .contact-hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            color: var(--primary-yellow);
+        }
+
+        .contact-hero p {
+            font-size: 1.3rem;
+            max-width: 600px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: start;
+            margin: 80px 0;
+        }
+
+        .contact-info-card {
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 215, 0, 0.2);
+        }
+
+        .contact-info-card h2 {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+            color: var(--dark);
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .contact-info-card h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: var(--primary-yellow);
+        }
+
+        .contact-info-card > p {
+            font-size: 1.1rem;
+            color: var(--dark-gray);
+            margin-bottom: 30px;
+            line-height: 1.7;
+        }
+
+        .contact-details-enhanced {
+            margin: 40px 0;
+        }
+
+        .contact-item-enhanced {
+            display: flex;
+            align-items: center;
+            padding: 25px;
+            margin-bottom: 20px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            border-left: 4px solid var(--primary-yellow);
+        }
+
+        .contact-item-enhanced:hover {
+            transform: translateX(10px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .contact-icon-enhanced {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--primary-yellow) 0%, var(--secondary-yellow) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            flex-shrink: 0;
+            color: var(--dark);
+            font-size: 1.5rem;
+        }
+
+        .contact-text-enhanced h4 {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+            color: var(--dark);
+        }
+
+        .contact-text-enhanced p,
+        .contact-text-enhanced a {
+            color: var(--dark-gray);
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
+
+        .contact-text-enhanced a:hover {
+            color: var(--primary-yellow);
+        }
+
+        .social-contact-buttons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .social-contact-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px 20px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .social-contact-btn.whatsapp {
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+            color: white;
+        }
+
+        .social-contact-btn.instagram {
+            background: linear-gradient(135deg, #E1306C 0%, #833AB4 100%);
+            color: white;
+        }
+
+        .social-contact-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .contact-form-enhanced {
+            background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 215, 0, 0.2);
+        }
+
+        .contact-form-enhanced h3 {
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            color: var(--dark);
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .contact-form-enhanced h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--primary-yellow);
+        }
+
+        .form-group-enhanced {
+            margin-bottom: 25px;
+        }
+
+        .form-group-enhanced label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--dark);
+            font-size: 1rem;
+        }
+
+        .form-control-enhanced {
+            width: 100%;
+            padding: 15px 20px;
+            border: 2px solid #e9ecef;
+            border-radius: 12px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            background: white;
+        }
+
+        .form-control-enhanced:focus {
+            outline: none;
+            border-color: var(--primary-yellow);
+            box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.1);
+            transform: translateY(-2px);
+        }
+
+        textarea.form-control-enhanced {
+            min-height: 150px;
+            resize: vertical;
+            font-family: inherit;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 18px;
+            background: linear-gradient(135deg, var(--primary-yellow) 0%, var(--secondary-yellow) 100%);
+            color: var(--dark);
+            border: none;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(255, 215, 0, 0.3);
+        }
+
+        .map-section {
+            margin: 80px 0;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .map-placeholder {
+            background: linear-gradient(135deg, var(--gray) 0%, #e9ecef 100%);
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--dark-gray);
+            font-size: 1.2rem;
+        }
+
+        .business-hours {
+            background: var(--dark);
+            color: var(--light);
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .business-hours h3 {
+            color: var(--primary-yellow);
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+
+        .hours-list {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .hour-item {
+            text-align: center;
+        }
+
+        .hour-item .day {
+            font-weight: 600;
+            color: var(--primary-yellow);
+            margin-bottom: 5px;
+        }
+
+        .hour-item .time {
+            font-size: 1.1rem;
+        }
+    </style>
 </head>
 <body>
     <!-- Header Section -->
@@ -43,118 +347,141 @@
         </div>
     </header>
 
-    <!-- Page Header -->
-    <section class="page-header">
+    <!-- Enhanced Hero Section -->
+    <section class="contact-hero">
         <div class="container">
-            <h1>Contact Us</h1>
-            <ul class="breadcrumb">
-                <li><a href="index.html">Home</a></li>
-                <li>Contact</li>
-            </ul>
+            <div class="contact-hero-content">
+                <h1>Get In Touch</h1>
+                <p>Your reliable transportation partner in Yeovil. We're here to serve you 24/7 with premium taxi services.</p>
+            </div>
         </div>
     </section>
 
     <!-- Contact Section -->
     <section class="contact">
         <div class="container">
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h2>Get In Touch</h2>
-                    <p>We're here to help with all your transportation needs in Yeovil and surrounding areas. Whether you have a question about our services, need to book a ride, or want to provide feedback, we'd love to hear from you.</p>
+            <div class="contact-grid">
+                <div class="contact-info-card">
+                    <h2>Contact Information</h2>
+                    <p>Reach out to us through any of the following channels. We're always ready to assist with your transportation needs.</p>
                     
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <div class="contact-icon">
+                    <div class="contact-details-enhanced">
+                        <div class="contact-item-enhanced">
+                            <div class="contact-icon-enhanced">
                                 <i class="fas fa-phone"></i>
                             </div>
-                            <div class="contact-text">
-                                <h4>Call Us</h4>
+                            <div class="contact-text-enhanced">
+                                <h4>Call Us Directly</h4>
                                 <p><a href="tel:+447721575222">+44 7721 575222</a></p>
+                                <small>24/7 Available</small>
                             </div>
                         </div>
-                        <div class="contact-item">
-                            <div class="contact-icon">
+                        <div class="contact-item-enhanced">
+                            <div class="contact-icon-enhanced">
                                 <i class="fas fa-envelope"></i>
                             </div>
-                            <div class="contact-text">
+                            <div class="contact-text-enhanced">
                                 <h4>Email Us</h4>
-                                <p><a href="mailto:info@yeovilcab.co.uk">info@yeovilcab.co.uk</a></p>
+                                <p><a href="mailto:go@yeovilcab.co.uk">go@yeovilcab.co.uk</a></p>
+                                <small>We reply within 2 hours</small>
                             </div>
                         </div>
-                        <div class="contact-item">
-                            <div class="contact-icon">
+                        <div class="contact-item-enhanced">
+                            <div class="contact-icon-enhanced">
                                 <i class="fas fa-map-marker-alt"></i>
                             </div>
-                            <div class="contact-text">
+                            <div class="contact-text-enhanced">
                                 <h4>Our Location</h4>
                                 <p>Yeovil, Somerset, United Kingdom</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-clock"></i>
-                            </div>
-                            <div class="contact-text">
-                                <h4>Operating Hours</h4>
-                                <p>24 hours, 7 days a week</p>
+                                <small>Serving all surrounding areas</small>
                             </div>
                         </div>
                     </div>
                     
-                    <div class="social-icons">
-                        <a href="#" class="btn btn-primary" style="margin-right: 10px;">
+                    <div class="social-contact-buttons">
+                        <a href="https://wa.me/447721575222" class="social-contact-btn whatsapp">
                             <i class="fab fa-whatsapp"></i> WhatsApp
                         </a>
-                        <a href="#" class="btn btn-primary">
+                        <a href="https://www.instagram.com/yeovilcab.co.uk/" class="social-contact-btn instagram">
                             <i class="fab fa-instagram"></i> Instagram
                         </a>
                     </div>
                 </div>
                 
-                <div class="contact-form">
+                <div class="contact-form-enhanced">
                     <h3>Send Us a Message</h3>
                     <form id="contactForm">
-                        <div class="form-group">
-                            <label for="name">Your Name</label>
-                            <input type="text" id="name" class="form-control" required>
+                        <div class="form-group-enhanced">
+                            <label for="name">Your Full Name</label>
+                            <input type="text" id="name" class="form-control-enhanced" placeholder="Enter your name" required>
                         </div>
-                        <div class="form-group">
+                        <div class="form-group-enhanced">
                             <label for="email">Email Address</label>
-                            <input type="email" id="email" class="form-control" required>
+                            <input type="email" id="email" class="form-control-enhanced" placeholder="Enter your email" required>
                         </div>
-                        <div class="form-group">
+                        <div class="form-group-enhanced">
                             <label for="phone">Phone Number</label>
-                            <input type="tel" id="phone" class="form-control">
+                            <input type="tel" id="phone" class="form-control-enhanced" placeholder="Enter your phone number">
                         </div>
-                        <div class="form-group">
+                        <div class="form-group-enhanced">
                             <label for="subject">Subject</label>
-                            <input type="text" id="subject" class="form-control" required>
+                            <input type="text" id="subject" class="form-control-enhanced" placeholder="What is this regarding?" required>
                         </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" class="form-control" required></textarea>
+                        <div class="form-group-enhanced">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" class="form-control-enhanced" placeholder="Tell us how we can help you..." required></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary" style="width: 100%;">
+                        <button type="submit" class="submit-btn">
                             <i class="fas fa-paper-plane"></i> Send Message
                         </button>
                     </form>
                 </div>
             </div>
+
+            <!-- Business Hours -->
+            <div class="business-hours">
+                <h3>24/7 Service Available</h3>
+                <div class="hours-list">
+                    <div class="hour-item">
+                        <div class="day">Monday - Sunday</div>
+                        <div class="time">24 Hours</div>
+                    </div>
+                    <div class="hour-item">
+                        <div class="day">Emergency Service</div>
+                        <div class="time">Always Available</div>
+                    </div>
+                    <div class="hour-item">
+                        <div class="day">Response Time</div>
+                        <div class="time">Within 15 Minutes</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Map Section -->
+            <div class="map-section">
+                <div class="map-placeholder">
+                    <div style="text-align: center;">
+                        <i class="fas fa-map-marked-alt" style="font-size: 3rem; margin-bottom: 15px; color: var(--primary-yellow);"></i>
+                        <h3>Service Area: Yeovil & Surrounding Regions</h3>
+                        <p>We cover all of Yeovil and nearby areas with our reliable taxi service</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Call to Action Section -->
-    <section class="cta-section">
+    <!-- Enhanced Call to Action Section -->
+    <section class="cta-section" style="background: linear-gradient(135deg, var(--dark) 0%, #222 100%);">
         <div class="container">
-            <h2>Need a Ride Now?</h2>
-            <p>Don't wait, call us directly for immediate assistance with your transportation needs.</p>
-            <a href="tel:+447721575222" class="cta-phone">+44 7721 575222</a>
+            <h2 style="color: var(--primary-yellow);">Need Immediate Assistance?</h2>
+            <p style="font-size: 1.2rem;">Call us now for instant booking and reliable transportation</p>
+            <a href="tel:+447721575222" class="cta-phone" style="font-size: 2.5rem;">+44 7721 575222</a>
             <div class="cta-buttons">
-                <a href="tel:+447721575222" class="btn btn-primary">
-                    <i class="fas fa-phone"></i> CALL TO BOOK
+                <a href="tel:+447721575222" class="btn btn-primary" style="padding: 15px 30px; font-size: 1.1rem;">
+                    <i class="fas fa-phone"></i> CALL NOW
                 </a>
-                <a href="https://wa.me/447721575222" class="btn btn-secondary">
-                    <i class="fab fa-whatsapp"></i> CHAT WITH US
+                <a href="https://wa.me/447721575222" class="btn btn-secondary" style="padding: 15px 30px; font-size: 1.1rem;">
+                    <i class="fab fa-whatsapp"></i> WHATSAPP US
                 </a>
             </div>
         </div>
@@ -212,5 +539,3 @@
     <script src="js/script.js"></script>
 </body>
 </html>
-
-
