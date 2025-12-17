@@ -1,155 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Yeovil Cabs | #1 Cab services in Yeovil and surrounding areas</title>
 
-    <title>Yeovil Cabs | Safe, Reliable & Affordable Transportation</title>
-    <meta name="description" content="Yeovil Cabs provides safe, reliable, and affordable transportation services in Yeovil. Airport transfers, hospital taxis, and more. Book now!">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://www.yeovilcab.co.uk/">
+  <meta name="description" content="Yeovil Cabs provides safe, reliable, and affordable transportation services in Yeovil. Airport transfers, hospital taxis, and more. Book now!">
+  <link rel="canonical" href="https://www.yeovilcab.co.uk/">
 
-    <!-- ✅ Preload HERO image (LCP boost) -->
-    <link rel="preload" as="image" href="images/hero-bg.webp" type="image/webp">
+  <!-- Icons -->
+  <link rel="icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
-    <!-- ✅ Icons -->
-    <link rel="icon" href="/favicon.ico">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="manifest" href="/site.webmanifest">
+  <!-- Font Awesome (non-blocking) -->
+  <link rel="preload" as="style"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        onload="this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  </noscript>
 
-    <!-- ✅ Font Awesome (non-blocking) -->
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-          as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    </noscript>
+  <!-- Preload Hero Image -->
+  <link rel="preload" as="image"
+        href="images/hero-bg.webp"
+        type="image/webp"
+        fetchpriority="high">
 
-    <!-- ✅ Main CSS -->
-    <link rel="stylesheet" href="css/style.css">
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
 <header>
-    <div class="container">
-        <div class="header-top">
-            <div class="logo">
-                <i class="fas fa-taxi logo-icon"></i>
-                <h1>YEOVIL CABS</h1>
-            </div>
-
-            <div class="contact-info">
-                <a href="tel:+447721575222" class="phone-number">
-                    <i class="fas fa-phone"></i> +44 7721 575222
-                </a>
-                <div class="social-icons">
-                    <a href="https://wa.me/447721575222"><i class="fab fa-whatsapp"></i></a>
-                    <a href="https://www.instagram.com/yeovilcab.co.uk/"><i class="fab fa-instagram"></i></a>
-                    <a href="https://g.page/r/CRvy1ZGY4O-WEAI/review"><i class="fab fa-google"></i></a>
-                </div>
-            </div>
-        </div>
-
-        <nav>
-            <div class="mobile-menu"><i class="fas fa-bars"></i></div>
-            <ul class="nav-links">
-                <li><a class="active" href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="testimonials.html">Testimonials</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+  <div class="container header-top">
+    <div class="logo">
+      <i class="fas fa-taxi"></i>
+      <h1>YEOVIL CABS</h1>
     </div>
+
+    <div class="contact-info">
+      <a href="tel:+447721575222" class="phone">
+        <i class="fas fa-phone"></i> +44 7721 575222
+      </a>
+    </div>
+
+    <div class="mobile-menu">
+      <i class="fas fa-bars"></i>
+    </div>
+  </div>
+
+  <nav class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="services.html">Services</a>
+    <a href="testimonials.html">Testimonials</a>
+    <a href="contact.html">Contact</a>
+  </nav>
 </header>
 
-<!-- ✅ HERO (LCP Optimized) -->
+<!-- HERO -->
 <section class="hero">
-    <div class="container">
-        <h2>Safe, Reliable & Affordable Taxi Service</h2>
-        <p>
-            We provide premium transportation services in Yeovil and surrounding areas.
-            Airport transfers, hospital taxis, and more.
-        </p>
+  <img
+    src="images/hero-bg.webp"
+    alt="Yeovil taxi service"
+    width="1600"
+    height="900"
+    loading="eager"
+    fetchpriority="high"
+    class="hero-img">
 
-        <div class="cta-buttons">
-            <a href="tel:+447721575222" class="btn btn-primary">
-                <i class="fas fa-phone"></i> CALL NOW
-            </a>
-            <a href="https://wa.me/447721575222" class="btn btn-secondary">
-                <i class="fab fa-whatsapp"></i> BOOK VIA WHATSAPP
-            </a>
-        </div>
+  <div class="hero-overlay"></div>
+
+  <div class="container hero-content">
+    <h2>Safe, Reliable & Affordable Taxi Service</h2>
+    <p>
+      We provide premium transportation services in Yeovil and surrounding areas.
+      Whether you need an airport transfer, hospital taxi, or a ride across town,
+      our professional drivers are here for you.
+    </p>
+
+    <div class="buttons">
+      <a href="tel:+447721575222" class="btn primary">
+        <i class="fas fa-phone"></i> CALL NOW
+      </a>
+      <a href="https://wa.me/447721575222" class="btn secondary">
+        <i class="fab fa-whatsapp"></i> BOOK VIA WHATSAPP
+      </a>
     </div>
+  </div>
 </section>
 
-<!-- Services -->
+<!-- SERVICES -->
 <section class="services">
-    <div class="container">
-        <div class="section-title">
-            <h2>Our Services</h2>
-        </div>
+  <div class="container">
+    <h2 class="section-title">Our Services</h2>
 
-        <div class="services-grid">
-            <div class="service-card">
-                <div class="service-img" style="background-image:url('images/hospital-taxi-service.jpg')"></div>
-                <div class="service-content">
-                    <h3>Hospital Taxi</h3>
-                    <p>Reliable transport to hospitals and medical appointments.</p>
-                    <a href="hospital-taxi.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </div>
+    <div class="services-grid">
+      <!-- YOU CAN CHANGE IMAGE & NAME LATER -->
+      <div class="service-card">
+        <img src="images/hospital-taxi-service.jpg" loading="lazy" alt="Hospital Taxi">
+        <h3>Hospital Taxi</h3>
+      </div>
 
-            <div class="service-card">
-                <div class="service-img" style="background-image:url('images/airport-transfers-service.jpg')"></div>
-                <div class="service-content">
-                    <h3>Airport Transfers</h3>
-                    <p>Comfortable and punctual airport transfers.</p>
-                    <a href="airport-transfers.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </div>
-        </div>
+      <div class="service-card">
+        <img src="images/rail-station-taxi-service.jpg" loading="lazy" alt="Rail Station Taxi">
+        <h3>Rail Station Taxi</h3>
+      </div>
+
+      <div class="service-card">
+        <img src="images/airport-transfers-service.jpg" loading="lazy" alt="Airport Transfers">
+        <h3>Airport Transfers</h3>
+      </div>
+
+      <div class="service-card">
+        <img src="images/hotel-transfers-service.jpg" loading="lazy" alt="Hotel Transfers">
+        <h3>Hotel Transfers</h3>
+      </div>
     </div>
+  </div>
 </section>
 
-<!-- About -->
-<section class="about-company">
-    <div class="container">
-        <div class="about-company-content">
-            <div class="about-image">
-                <img src="images/black-and-white-squires.jpg"
-                     alt="Yeovil Cabs Professional Taxi Service"
-                     loading="lazy">
-                <div class="image-border"></div>
-            </div>
-
-            <div class="about-text">
-                <h2>YEOVIL CABS</h2>
-                <p>
-                    A Registered Private Limited Company providing safe,
-                    reliable and affordable taxi services across Yeovil.
-                </p>
-                <a href="about.html" class="btn btn-primary">
-                    <i class="fas fa-info-circle"></i> LEARN MORE
-                </a>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Footer -->
 <footer>
-    <div class="container">
-        <div class="footer-bottom">
-            <p>&copy; 2025 Yeovil Cabs. All Rights Reserved.</p>
-        </div>
-    </div>
+  <p>© 2025 Yeovil Cabs. All Rights Reserved.</p>
 </footer>
 
-<!-- ✅ JS at bottom (non-blocking) -->
 <script src="js/script.js" defer></script>
-
 </body>
 </html>
