@@ -1,155 +1,159 @@
 :root {
-    --primary-yellow: #FFD700;
-    --secondary-yellow: #FFC107;
-    --dark: #000000;
-    --light: #FFFFFF;
-    --gray: #F5F5F5;
-    --dark-gray: #333333;
-    --transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+  --yellow: #FFD700;
+  --dark: #000;
+  --light: #fff;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, sans-serif;
 }
 
 body {
-    background-color: var(--light);
-    color: var(--dark);
-    line-height: 1.6;
+  color: var(--dark);
+  background: var(--light);
 }
 
 .container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px;
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
 }
 
-/* Header */
+/* HEADER */
 header {
-    background-color: var(--dark);
-    color: var(--light);
-    padding: 15px 0;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  background: #000;
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
-/* Hero Section (OPTIMIZED) */
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+}
+
+.logo h1 {
+  color: var(--yellow);
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding-bottom: 10px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+}
+
+/* HERO */
 .hero {
-    background-color: #000;
-    background-image:
-        linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-        url('../images/hero-bg.webp');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: var(--light);
-    padding: 100px 0;
-    text-align: center;
-    min-height: 60vh;
-    will-change: transform;
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.hero-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,.7);
+}
+
+.hero-content {
+  position: relative;
+  color: white;
+  text-align: center;
+  padding: 100px 0;
 }
 
 .hero h2 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-    color: var(--primary-yellow);
-    contain: layout paint;
+  color: var(--yellow);
+  font-size: 3rem;
 }
 
-.hero p {
-    font-size: 1.2rem;
-    max-width: 700px;
-    margin: 0 auto 30px;
-    contain: layout paint;
-}
-
-/* Buttons */
-.cta-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
+/* BUTTONS */
+.buttons {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
 .btn {
-    display: inline-block;
-    padding: 12px 30px;
-    border-radius: 30px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: var(--transition);
-    text-align: center;
+  padding: 12px 30px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
 }
 
-.btn-primary {
-    background-color: var(--primary-yellow);
-    color: var(--dark);
+.primary {
+  background: var(--yellow);
+  color: black;
 }
 
-.btn-primary:hover {
-    background-color: var(--secondary-yellow);
-    transform: translateY(-3px);
+.secondary {
+  border: 2px solid white;
+  color: white;
 }
 
-.btn-secondary {
-    background-color: transparent;
-    color: var(--light);
-    border: 2px solid var(--light);
+/* SERVICES */
+.services {
+  padding: 80px 0;
+  background: #f5f5f5;
 }
 
-.btn-secondary:hover {
-    background-color: var(--light);
-    color: var(--dark);
-    transform: translateY(-3px);
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+  gap: 20px;
 }
 
-/* Responsive Fix (SYNTAX FIXED) */
-@media (max-width: 992px) {
-    .hero h2 {
-        font-size: 2.5rem;
-    }
+.service-card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
 }
 
+.service-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* MOBILE */
 @media (max-width: 768px) {
-    .hero {
-        padding: 80px 0;
-    }
+  .hero {
+    min-height: 70vh;
+  }
 
-    .hero h2 {
-        font-size: 2rem;
-    }
+  .hero h2 {
+    font-size: 2rem;
+  }
 
-    .cta-buttons {
-        flex-direction: column;
-        align-items: center;
-    }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+  }
 
-    .btn {
-        width: 100%;
-        max-width: 300px;
-    }
-}
-
-@media (max-width: 576px) {
-    .hero h2 {
-        font-size: 1.8rem;
-    }
-
-    .section-title h2 {
-        font-size: 1.8rem;
-    }
-
-    .cta-phone {
-        font-size: 1.5rem;
-    }
-
-    .page-header h1 {
-        font-size: 2rem;
-    }
+  .nav-links.active {
+    display: flex;
+  }
 }
