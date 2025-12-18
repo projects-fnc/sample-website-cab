@@ -1,8 +1,8 @@
-const menuBtn = document.querySelector('.mobile-menu');
-const nav = document.querySelector('.nav-links');
+document.addEventListener("DOMContentLoaded", () => {
+  const menu = document.querySelector(".mobile-menu");
+  const nav = document.querySelector(".nav-links");
 
-if (menuBtn) {
-  menuBtn.addEventListener('click', () => {
-    nav.classList.toggle('active');
-  });
-}
+  if(menu){
+    menu.addEventListener("click", () => nav.classList.toggle("active"));
+  }
+});
